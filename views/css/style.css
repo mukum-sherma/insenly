@@ -1,0 +1,267 @@
+body {
+  /* for making navbar fixed on top , needs padding*/
+  padding-top: 70px;
+ font-family: 'Dosis', sans-serif;
+ background-color: #ffffff;
+}
+/**font-family: 'Dosis', sans-serif;
+font-family: 'Catamaran', sans-serif;**/
+
+#youtubeVideo1{
+  position: absolute;
+  widows: 100%;
+  height: auto;
+}
+
+#contactResetBtn{
+  margin-top: 50px;
+  width: 40%;
+}
+
+#js_send{
+  margin-top: 50px;
+  width: 40%;
+}
+
+#modal1{
+  height: 200px;
+}
+
+#modalFooter{
+  height: 40px;
+}
+
+#modalBody{
+height: auto;
+}
+
+#modalHeader{
+  height: 40px;
+}
+
+.form-group label{
+  margin-bottom: 0px;
+}
+
+.form-group{
+  margin-left: -15px;
+}
+
+/*
+#contactTableLeft{
+  float: Left;
+}
+*/
+
+#contactInput{
+  padding-bottom: 50px;
+}
+
+#portfolioGap{
+  padding-bottom: 100px;
+  color: #ffffff;
+
+}
+
+#imgAbout{
+  width: 85%;
+  height: auto;
+}
+
+#title1Contact{
+  padding-top: 40px;
+  padding-bottom: 0px;
+}
+
+#contactText{
+  line-height: 40px;
+}
+
+#title1{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#title2{
+  font-style: italic;
+  padding-bottom: 20px;
+
+}
+
+#title3{
+  line-height: 30px;
+  padding-bottom: 60px;
+  color: grey;
+}
+
+#contactTitle1{
+  font-style: italic;
+  color: grey;
+  margin-top: -30px;
+  padding-bottom: 10px;
+}
+
+#contactTitle2{
+  font-style: italic;
+  padding-bottom: 10px;
+
+}
+
+#contactTitle3{
+  font-style: italic;
+  line-height: 20px;
+  padding-bottom: 30px;
+  color: grey;
+}
+
+#navBarUl{
+  text-align: center;
+  /*text-shadow: 1px 1px 2px red;*/
+}
+
+#navBarUl{
+  text-decoration: none;
+  color: white;
+}
+
+#navBarUl{
+  /*font-family: 'Josefin Sans', sans-serif;*/
+  font-family: 'Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*nav bar bg , text also*/
+#myTopNavBar a:hover{
+  color: #fd5f61;
+  background-color: #ffffff;
+}
+
+#myTopNavBar{
+  background-color:#fd5f61;
+  box-shadow: 1px 0px 10px grey;
+}
+/* #ff4660; #fd5f61 #f74547*/
+#youtubeVideo{
+  margin-top: -9px;
+  width: 100vw;
+  height: 50vw;
+}
+
+/*background color of the collapsed icon menu in mobile version*/
+.navbar-default .navbar-toggle:hover {
+    background-color: #d64747;
+  }
+
+/* when clicked changes color
+ .navbar-default .navbar-toggle.collapsed {
+  border-color: white;
+}
+
+.navbar-default .navbar-toggle.collapsed .icon-bar {
+  background-color: #A4ABB0;
+}
+*/
+.navbar-default .navbar-toggle{
+ border-color:white ;
+}
+
+#aboutImg{
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  color:white;
+}
+
+.paraText{
+  color: grey;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+       background-color:white;
+}
+
+
+/*collapsed menu icon
+.navbar-default .navbar-toggle .icon {
+  background-color: white;
+}
+*/
+
+header{
+	height: 500px;
+}
+
+#imgDiv{
+	background-color: black;
+}
+
+#homeImg{
+  /* margin can be negative , padding can't be negative*/
+  margin-top: -20px;
+  height: 100%;
+  width: 100%;
+}
+
+#imgDiv{
+	/* aspectfill , height and width are adjusted*/
+  height: 100%;
+  width: 100%;
+}
+#clients {
+	padding: center;
+  	margin: center;
+  }
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #fd5f61;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #fd5f61;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+/* collapsed menu backgroud in mobile version
+.navbar {background-color: #8e181b;}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {color: #f1f1f1;}
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {color: #f1f1f1; background-color: #b27677;}
+@media only screen and (max-width: 766px) {
+.collapsing, .in {background-color: green;}
+.collapsing ul li a, .in ul li a {color: #555!important;}
+.collapsing ul li a:hover, .in ul li a:hover {color: #f1f1f1!important;}
+}
+*/

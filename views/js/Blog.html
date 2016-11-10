@@ -1,0 +1,479 @@
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr" ng-app>
+<head>
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="google" value="notranslate">
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600|Poppins|Kenia|Cabin:600" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/flatly.bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="css/united.style.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/lightbox.css" type="text/css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+  <script src="js/lightbox.js"></script>
+  <link rel="stylesheet" href="css/commentCSS.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <!-- For Firebase Configuration -->
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  <!--<script src="js/firebaseConnect.js"></script>-->
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAJtPQwqPa6e2a0mXenvqE3yfqysfVN9lo",
+      authDomain: "insenly-bf9c3.firebaseapp.com",
+      databaseURL: "https://insenly-bf9c3.firebaseio.com",
+      storageBucket: "insenly-bf9c3.appspot.com",
+      messagingSenderId: "147095314071"
+    };
+       
+    firebase.initializeApp(config);
+  </script>
+
+
+  <title>Blog</title>
+</head>
+<body>
+	<!--<nav class="navbar navbar-default">-->
+  <!--<nav class="navbar navbar-default navbar-fixed-top">-->
+  <!-- make nav bar fixed on top , also change body padding to 70px-->
+
+<nav class="navbar navbar-default navbar-fixed-top" id="myTopNavBar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a class="navbar-brand" href="#">Brand</a>-->
+      <a href="/" text-decoration="none"><img src="img/insenlyLogo.png" style="width:auto;height:30"></a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >  
+      <ul class="nav navbar-nav navbar-right" id="navBarUl">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/portfolio">PORTFOLIO</a></li>
+        <li><a href="/services">SERVICES</a></li>
+        <li><a href="/blog">BLOG</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+
+        <!--
+          <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+        -->
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <script type="text/javascript">
+    var playersRef = firebase.database().ref("players2/");
+
+    playersRef.set({
+       John: {
+          number: 1,
+          age: 30
+       },
+      
+       Amanda: {
+          number: 2,
+          age: 20
+       }
+    });
+  </script>
+
+<div class="container">
+    <!--<div class="col-sm-8">-->
+    <div class="col-sm-12">
+        <div class="panel panel-white post panel-shadow">
+
+          <!-- Blog Post -->
+            <div id="blogDiv">
+                <!-- Title -->
+                <h1>Elevator World Tour Visit</h1>
+
+                <!-- Author -->
+                <p class="lead">
+                    by <a href="#">Insenly</a>
+                </p>
+
+                <hr>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Posted on Oct 14, 2016 at 9:00 PM</p>
+
+                <hr>
+
+                <!-- Preview Image -->
+                  <img class="img-responsive" src="http://placehold.it/900x300" alt="" id="blogImg">
+
+                <hr>
+
+                <!-- Post Content -->
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+           </div>
+            <!--
+            <div class="post-heading">
+                <div class="pull-left image">
+                    <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="pull-left meta">
+                    <div class="title h5">
+                        <a href="#"><b>Ryan Haywood</b></a>
+                        made a post.
+                    </div>
+                    <h6 class="text-muted time"> 1 minute ago</h6>
+                </div>
+            </div> 
+          -->
+            
+            <!-- MAIN POST -->
+            <div class="post-description"> 
+                <p>This is our visit to Elevator Mount SKY 100. It's a great feelings</p>
+            </div>
+
+            <!--COMMENT BOX-->
+            <style>
+              #nameComment {
+                 padding-bottom: 5px;
+              }
+            </style>
+            
+             <div class="post-footer">
+
+              <div>
+                  <p class="text-right"  style="font-style:italic"> 
+                    <button class="btn" id="hideCommentBtn">Hide Comments</button>
+                    <button class="btn" id="showCommentBtn">Show Comments</button>
+                    <button class="btn" id="postCommentBtn">Post A Comment</button>
+                  </p>
+            </div>
+
+              <div id="postCommentBox">
+                <div class="row">
+                        <div class="col-md-6" id="nameComment">
+                          <input class="form-control" placeholder="Enter your name " type="text" name="postName" id="postName"> 
+                        </div> 
+                        <div class="col-md-6" id="nameComment">
+                          <input class="form-control" placeholder="Enter your email " type="text" name="postEmail" id="postEmail">  
+                        </div> 
+                 </div>
+
+                  <div class="input-group"> 
+                      <!--<input class="form-control" placeholder="Add a comment" type="text">-->
+                      <textarea class="form-control" rows="3" name="comment" id="comment" placeholder="Comment"></textarea>
+                      <span class="input-group-addon" onclick="postComment()">
+                          <a href="#"><i class="fa fa-edit"></i></a>  
+                      </span>
+                  </div>
+              </div>
+
+              <!-- <div ng-controller="MyController">  -->
+                <!-- COMMENT BODY-->
+                <!--<ul class="comments-list" ng-repeat="comment in comments.comment">-->
+                  <ul class="comments-list" id="listsOfComments">
+                    <li class="comment" id="commentLists">
+
+                      <!-- COMMENTS LOOPS START HERE-->
+                      <!--
+                            <a class="pull-left" href="#">
+                                <img class="avatar" src="http://bootdey.com/img/Content/user_3.jpg" alt="avatar">
+                            </a>
+                      -->
+                            <!--
+                            <div id="postImg">
+                              
+                            </div>
+                            <div class="comment-body" id="addComments"> 
+                             
+                                <div class="comment-heading">
+                                    <h4 class="user">Ryan Haywood</h4>
+                                    <h5 class="time">3 minutes ago</h5>
+                                </div>
+                              
+                            </div>-->
+
+                    
+                    </li>
+                  </ul>
+                <!--</div>-->
+              
+                  
+            </div>
+                <!--END OF COMMENTS-->
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+  function postComment(){
+    var name = document.querySelector("#" + "postName" + "[name='postName']").value;
+    var email = document.querySelector("#" + "postEmail" + "[name='postEmail']").value;
+    var comment = document.querySelector("#" + "comment" + "[name='comment']").value;
+    var postDate = new Date();
+    var commentId = (new Date().getTime()).toString();
+    console.log(commentId);
+
+    if (name == null || name == "") {
+        $('#modal1').modal('show');
+          return false;
+       }
+
+     if (email == null || email == "") {
+      $('#modal1').modal('show');
+        return false;
+     }
+
+     if (comment == null || comment == "") {
+      $('#modal1').modal('show');
+        return false;
+     }
+  
+    var playersRef = firebase.database().ref("Blog1/"+commentId.toString());
+    playersRef.set({
+          name:name,
+          email:email,
+          comment:comment,
+          postDate:postDate.toString()
+    });
+  }
+</script>
+
+<script>
+  $("#showCommentBtn").hide(0);
+
+  $("#postCommentBtn").click((function(){
+    $("#postCommentBox").toggle(500);
+    console.log("Post button clicked");
+  }))
+
+  $("#hideCommentBtn").click((function(){
+    $("#listsOfComments").hide(500);
+    $("#showCommentBtn").show(0);
+    $(this).hide(0);
+    console.log("Post button clicked");
+  }))
+
+  $("#showCommentBtn").click((function(){
+    $("#listsOfComments").show(500);
+    $("#hideCommentBtn").show(0);
+    $(this).hide(0);
+    console.log("Post button clicked");
+  }))
+</script>
+
+<script>
+var el = document.activeElement;
+
+        var ref = firebase.database().ref('Blog1');
+        ref.on("value", function(snapshot) {
+          //working --> console.log(snapshot.val().Comment.Comment1);
+
+         //document.getElementById("addComments").innerHTML="";
+        //document.getElementById("postImg").innerHTML="";
+        document.getElementById("commentLists").innerHTML = "";
+
+         // convert into json 
+         // {Comment1:"Hi","Comment2":"Hello"}
+          var myCom = JSON.stringify(snapshot.val());
+
+          //coverts into javascript object or dictionary like
+          var myComObjects = JSON.parse(myCom);
+
+          console.log(snapshot.val());
+
+          for (var myComObjectKey in myComObjects) {
+            //console.log(myComObjects[myComObject]);
+            var myComObject = myComObjects[myComObjectKey];
+            console.log(myComObject.name);
+
+            var divImg = document.createElement("div");
+            var divCommentHeading = document.createElement("div");
+            divCommentHeading.setAttribute("class","comment-heading");
+            var divCommentBody = document.createElement("div");
+            divCommentBody.setAttribute("class","comment-body")
+            divCommentBody.setAttribute("id","mainCommentBody");
+
+            var a = document.createElement("a");
+            a.setAttribute("class","pull-left");
+            a.setAttribute("href","#");
+            var img = document.createElement("img");
+            img.setAttribute("class","avatar");
+            img.setAttribute("src","http://bootdey.com/img/Content/user_3.jpg");
+            img.setAttribute("alt","avatar");
+            a.appendChild(img)
+
+            var h4 = document.createElement("h4");
+            h4.setAttribute("class","user");
+            var ht4 = document.createTextNode(myComObject.name);
+            h4.appendChild(ht4);
+
+            var h5 = document.createElement("h5");
+            h5.setAttribute("class","time");
+            var ht5 = document.createTextNode(myComObject.postDate);
+            h5.appendChild(ht5);
+
+            var p = document.createElement("p");
+            var t = document.createTextNode(myComObject.comment);
+            p.appendChild(t);
+            var divMainComment = document.createElement("div")
+            divMainComment.setAttribute("id","mainComment");
+            divMainComment.appendChild(p);
+
+            divImg.appendChild(a);
+            divCommentHeading.appendChild(divCommentBody);
+            divCommentBody.appendChild(h4);
+            divCommentBody.appendChild(h5);
+            divCommentBody.appendChild(divMainComment);
+
+            document.getElementById("commentLists").appendChild(divImg);
+            document.getElementById("commentLists").appendChild(divCommentHeading);
+
+         }
+       },
+       function (error) {
+          console.log("Error: " + error.code);
+       });
+  </script>
+
+<div class="modal fade" id="modal1">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4>INCORRECT INFORMATION</h4>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <h4 style="font-style:italic"> Name, Email and Comment fields must not be empty.<h4>
+            </div>
+            <div class="modal-footer" id="modalFooter">
+               
+            </div>
+        </div>
+ </div>
+<script src="js/jquery-3.1.1.min.js"></script>
+
+<footer>
+<pre style="border:0px solid Black; background-color:#f8f6f6;"></br><h6 class="text-center">COPYRIGHT @INSENLY.ALL RIGHTS RESERVED.</h5></br></pre>
+</footer>
+</body>
+</html>
+
+<!--
+
+
+      // $('#comment').focus(function() {
+      // $(document).keydown(function (e) {
+      //     if (e.which == 13) {
+      //          //prevents multiple press times
+      //         alert('enter key is pressed');
+      //         e.preventDefault();
+      //     }
+      //   });
+      // });
+
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<div class="container">
+    <div class="col-sm-8">
+        <div class="panel panel-white post panel-shadow">
+            <div class="post-heading">
+                <div class="pull-left image">
+                    <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="pull-left meta">
+                    <div class="title h5">
+                        <a href="#"><b>Ryan Haywood</b></a>
+                        made a post.
+                    </div>
+                    <h6 class="text-muted time">1 minute ago</h6>
+                </div>
+            </div> 
+            <div class="post-description"> 
+                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+                <div class="stats">
+                    <a href="#" class="btn btn-default stat-item">
+                        <i class="fa fa-thumbs-up icon"></i>2
+                    </a>
+                    <a href="#" class="btn btn-default stat-item">
+                        <i class="fa fa-share icon"></i>12
+                    </a>
+                </div>
+            </div>
+            <div class="post-footer">
+                <div class="input-group"> 
+                    <input class="form-control" placeholder="Add a comment" type="text">
+                    <span class="input-group-addon">
+                        <a href="#"><i class="fa fa-edit"></i></a>  
+                    </span>
+                </div>
+                <ul class="comments-list">
+                    <li class="comment">
+                        <a class="pull-left" href="#">
+                            <img class="avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="avatar">
+                        </a>
+                        <div class="comment-body">
+                            <div class="comment-heading">
+                                <h4 class="user">Gavino Free</h4>
+                                <h5 class="time">5 minutes ago</h5>
+                            </div>
+                            <p>Sure, oooooooooooooooohhhhhhhhhhhhhhhh</p>
+                        </div>
+                        <ul class="comments-list">
+                            <li class="comment">
+                                <a class="pull-left" href="#">
+                                    <img class="avatar" src="http://bootdey.com/img/Content/user_3.jpg" alt="avatar">
+                                </a>
+                                <div class="comment-body">
+                                    <div class="comment-heading">
+                                        <h4 class="user">Ryan Haywood</h4>
+                                        <h5 class="time">3 minutes ago</h5>
+                                    </div>
+                                    <p>Relax my friend</p>
+                                </div>
+                            </li> 
+                            <li class="comment">
+                                <a class="pull-left" href="#">
+                                    <img class="avatar" src="http://bootdey.com/img/Content/user_2.jpg" alt="avatar">
+                                </a>
+                                <div class="comment-body">
+                                    <div class="comment-heading">
+                                        <h4 class="user">Gavino Free</h4>
+                                        <h5 class="time">3 minutes ago</h5>
+                                    </div>
+                                    <p>Ok, cool.</p>
+                                </div>
+                            </li> 
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>Pueden pasar por mi WebSite, Hay mas elementos utiles <a href="http://programarlaweb.com/">WEBSITE</a></h1>
+-->
