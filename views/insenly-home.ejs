@@ -8,21 +8,70 @@
   </head>
   <body>
     <% include partials/homepageNavigation.ejs %>
-    <header id="first">
+    <link rel="stylesheet" type="text/css" href="youtubePlayer/ytbgnav.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://www.youtube.com/player_api"></script>
+    
+     <!-- Youtube Bg Video -->
+    <div class="top_box">
+        <div class="btn_vol on"></div>
+        <div id="player"></div>
+    </div>
+
+    <!-- popup -->
+    <div class="pop_yt" style="display:none">
+        <div class="close"></div>
+        <iframe width="960" height="540" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="pop_overlay" ></div>
+    
+    <style>
+        .top_box{
+            position:relative;width:auto;height:103%;overflow:hidden;margin-top:-270px
+        }
+
+        @media(min-width:768px) {
+             .top_box{
+            position:relative;width:auto;height:103%;overflow:hidden;margin-top:-10px
+             }
+        }
+    </style>
+    <script>
+        // YouTube ID
+        var bgID = ["q6f-LLM1H6U","qEYOyZVWlzs","R1-BTf3_Mys","N5wzkQvzp4c","9ZC4sPxMQ_M"];
+        var popID = ["56hGcCt0NuU","srK7Vj5p9Tg","18fSsOulNYw","cSxrDMADfJA","bhKFSXN2Fr4"];
+    </script>
+
+    <script src="youtubePlayer/ytbgnav.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+
+ <!--    <header id="first">
         <div class="header-content">
             <div class="inner">
                 <h1 class="cursive wow flipInX">Insenly</h1>
                 <h4>A perfect Digital Marketing Solution for your product</h4>
-                <hr>
+                <hr> -->
                 <!-- <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">More Video</a> &nbsp;  -->
                 <!-- <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a> -->
-            </div>
+           <!--  </div>
         </div>
-        <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="" id="video-background">
+        <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="" id="video-background"> -->
             <!-- <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser. -->
-            <source src="videos/cableCar.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+     <!--        <source src="videos/cableCar.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
-    </header>
+    </header> -->
 
     <section class="bg-primary" id="one">
         <div class="container">
@@ -405,6 +454,15 @@
             </div>
         </div>
  </div>
+
+<!-- For youtube bg video -->
+ <script>
+        
+ </script>
+
+ <style type="text/css">
+        
+ </style>
 
     <!--<div class="container-fluid" id="imgDiv">-->
        <!--  <div>
