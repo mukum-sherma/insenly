@@ -13,10 +13,12 @@
     <script src="http://www.youtube.com/player_api"></script>
     
      <!-- Youtube Bg Video -->
-    <div class="top_box">
+    <div class="top_box" id="youtubeVidBg">
         <div class="btn_vol on"></div>
         <div id="player"></div>
     </div>
+    <h1 class="cursive wow flipInX" id="h1Title">Insenly</h1></div>
+    <h4 id="h4Title">A perfect Digital Marketing Solution for your product</h4>
 
     <!-- popup -->
     <div class="pop_yt" style="display:none">
@@ -24,16 +26,27 @@
         <iframe width="960" height="540" src="" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="pop_overlay" ></div>
+
+    <img src="img/cable.jpeg" class="homeImg" id="homeImg00" style="width:auto;height:70%">
     
     <style>
-        .top_box{
-            position:relative;width:auto;height:103%;overflow:hidden;margin-top:-30px
-        }
-
-        @media(min-width:768px) {
-             .top_box{
-            position:relative;width:auto;height:103%;overflow:hidden;margin-top:-10px
+             #h1Title{position:absolute;left:50%;top:35%;width:128px;height:128px;margin-left:-64px;margin-top:-24px;cursor:pointer;}
+             #h4Title{position:absolute;left:20%;top:40%;width:450px;height:128px;margin-left:-64px;margin-top:-24px;cursor:pointer;}
+             #youtubeVidBg{
+                display: none;
              }
+        @media(min-width:768px) {
+             #homeImg00{
+                display: none;
+             }
+             #youtubeVidBg{
+                display: block;
+             }
+             .top_box{
+                position:relative;width:auto;height:103%;overflow:hidden;margin-top:-10px
+             }
+             #h1Title{position:absolute;left:50%;top:50%;width:128px;height:128px;margin-left:-64px;margin-top:-24px;cursor:pointer;}
+             #h4Title{position:absolute;left:40%;top:55%;width:450px;height:128px;margin-left:-64px;margin-top:-24px;cursor:pointer}
         }
     </style>
     <script>
@@ -56,13 +69,14 @@
       })();
     </script>
 
+   
 
  <!--    <header id="first">
         <div class="header-content">
             <div class="inner">
                 <h1 class="cursive wow flipInX">Insenly</h1>
                 <h4>A perfect Digital Marketing Solution for your product</h4>
-                <hr> -->
+                <hr>
                 <!-- <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">More Video</a> &nbsp;  -->
                 <!-- <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a> -->
            <!--  </div>
