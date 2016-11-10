@@ -1,7 +1,9 @@
 
 var express = require('express');
+var compression = require('compression');
 var app = express();
 
+app.use(compression());
 app.set('view engine','ejs')
 //app.set('views',__dirname+'/myFolder') //custom folder
 
