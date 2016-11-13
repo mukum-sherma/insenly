@@ -17,7 +17,8 @@ body{background-color:#000}*/
 .top_box .btn_vol{position:absolute;right:20px;top:100px;width:32px;height:32px;background:url("../images/volume.png") no-repeat;cursor:pointer}
 .top_box .btn_vol.on{background-position:0 0}
 .top_box .btn_vol.off{background-position:0 -32px}
-.top_box .bg_dot{position:absolute;width:100%;height:100%;left:0;top:0;background:url("../images/bg.png");z-index:-9}
+.top_box .bg_dot{position:absolute;width:100%;height:100%;left:0;top:0;background:url("../images/bg.png");z-index:-9}*/
+/*.top_box .bg_dot{position:absolute;width:100%;height:100%;left:0;top:0;background:url("../img/cable.jpeg");z-index:-9}*/
 /* navigation */
 .top_box .control{position:absolute;left:0;top:50%;margin-top:140px;width:100%;text-align:center}
 .top_box .control li{display:inline-block;list-style:none;padding:10px 14px;margin:0 0 4px 0;border:1px solid #FFFFFF;border-radius:8px;width:100px;height:22px;line-height:22px;font-size:14px;color:#FFFFFF;background-color:rgba(255,255,255,.4);cursor:pointer}

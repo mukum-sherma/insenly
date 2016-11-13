@@ -8,11 +8,13 @@
   </head>
   <body>
     <% include partials/homepageNavigation.ejs %>
+    <!-- <link rel="stylesheet" type="text/css" href="youtubePlayer/reset.css"> -->
     <link rel="stylesheet" type="text/css" href="youtubePlayer/ytbgnav.css">
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="http://www.youtube.com/player_api"></script>
     
      <!-- Youtube Bg Video -->
+     <script>$("#player").reset()</script>
     <div class="top_box" id="youtubeVidBg">
         <div class="btn_vol on"></div>
         <div id="player"></div>
