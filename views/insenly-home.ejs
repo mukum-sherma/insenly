@@ -42,17 +42,19 @@
         <iframe width="960" height="540" src="" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="pop_overlay" ></div> -->
-
-    <img src="img/HK_jungle.jpg" class="homeImg" id="homeImg00" style="width:100%;height:auto">
-    
+    <img src="img/cable.jpeg" class="homeImg" id="homeImg00" style="width:100vw;height:100vw;overflow:hidden;margin-top=0px;opacity:0.6">
+   <!--  <div class="overlay" id="mobileHomeImgOverlay" style="background-color:black;width:100%;height:500px;position:absolute;margin-top:-100vw;opacity:0.4"></div> -->
     <style>
             /* #h1Title{position:absolute;top:30%;width:120px;height:128px;cursor:pointer;}
              #h4Title{position:absolute;top:37%;width:350px;height:128px;cursor:pointer;}*/
-             #headerText{position:absolute;top:40vw;margin-left: 12vw;width: 75vw}
+             #headerText{position:absolute;top:40vw;margin-left: 12vw;width: 75vw;z-index:99;}
              #youtubeVidBg{
                 display: none;
              }
         @media(min-width:768px) {
+            #mobileHomeImgOverlay{
+                display: none;
+             }
              #homeImg00{
                 display: none;
              }
