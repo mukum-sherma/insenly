@@ -70,14 +70,6 @@
         }
     </style>
 
-    <script type="text/javascript">
-      <!--
-      if (screen.width <= 800) {
-        $("#youtubeVidBg").remove();
-      }
-      //-->
-    </script>
-
     <script>
         // YouTube ID
         var bgID = ["6OPWLZTFW4I","PRH-WxuP-uA","ivgf6_vJGS4","6OPWLZTFW4I"];
@@ -479,13 +471,15 @@
  </div>
 
 <!-- For youtube bg video -->
- <script>
-        
- </script>
+ <script type="text/javascript">
+     if(window.innerWidth <= 800) {
+         // console.log('device is MOBILE');
+         $("#youtubeVidBg").remove();
+       } else {
+         // console.log('device is DESKTOP');
+       }
+    </script>
 
- <style type="text/css">
-        
- </style>
 
     <!--<div class="container-fluid" id="imgDiv">-->
        <!--  <div>
