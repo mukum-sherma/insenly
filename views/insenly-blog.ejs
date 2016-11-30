@@ -120,7 +120,7 @@
                 <!--</div>-->
                 <div style="padding-left:0px">
                 <ul class="comments-list" id="listsOfComments" style="text-align:left; margin-left:-40px">
-                    <li class="comment" id="commentLists">
+                    <li style="list-style:none" class="comment" id="commentLists">
 
                     </li>
                   </ul>
@@ -132,16 +132,36 @@
                 <!-- <div ng-controller="MyController">  -->
                 <!-- COMMENT BODY-->
                 <!--<ul class="comments-list" ng-repeat="comment in comments.comment">-->
-                <div class=class="col-lg-10 col-lg-offset-1">
+                <div class="col-lg-10 col-lg-offset-1">
                    <ul class="comments-list" id="listsOfComments">
-                    <li class="comment" id="commentLists">
-
+                    <li style="list-style:none" class="comment" id="commentLists">
+                        <table >
+                            <tbody border="0">
+                              <tr>
+                                <td rowspan="4" id="commentUserIcon" style="width:30px"></td>
+                              </tr>
+                              <tr>
+                                <td rowspan="1" id="commentUserName" height="20px"></td>
+                              </tr>
+                              <tr>
+                                <td rowspan="1" id="commentTime" height="20px"></td>
+                              </tr>
+                              <tr>
+                                <td rowspan="1" id="commentData" height="20px"></td>
+                              </tr>
+                            </tbody>
+                        </table>
                     </li>
                   </ul>
                 </div>
-
         </div>
    </section>
+
+   <style type="text/css">
+      #commentTable .tr{
+        height: 30px
+      }
+   </style>
 
 <!--For alerting user that the infos are not properly filled-->
 <div class="modal fade" id="modal1" data-color="red">
@@ -327,30 +347,41 @@
 
             var h4 = document.createElement("h4");
             h4.setAttribute("class","user");
+            h4.setAttribute("position","absolute");
+            h4.setAttribute("margin-right","200px");
             var ht4 = document.createTextNode(myComObject.name);
             h4.appendChild(ht4);
 
-            var h5 = document.createElement("h5");
+            var h5 = document.createElement("h6");
             h5.setAttribute("class","time");
+            h5.setAttribute("font-size","10");
             var ht5 = document.createTextNode(myComObject.postDate);
+            //h5.setAttribute("margin-left","200px");
             h5.appendChild(ht5);
+
 
             var p = document.createElement("p");
             var t = document.createTextNode(myComObject.comment);
+            p.setAttribute("padding-left","600px")
             p.appendChild(t);
             var divMainComment = document.createElement("div")
             divMainComment.setAttribute("id","mainComment");
             divMainComment.appendChild(p);
 
             divImg.appendChild(a);
-            divCommentHeading.appendChild(divCommentBody);
-            divCommentBody.appendChild(h4);
-            divCommentBody.appendChild(h5);
-            divCommentBody.appendChild(divMainComment);
-            divCommentBody.setAttribute("padding-left","20px");
+            // divCommentHeading.appendChild(divCommentBody);
+            // divCommentBody.appendChild(h4);
+            // divCommentBody.appendChild(h5);
+            // divCommentBody.appendChild(divMainComment);
+            // divCommentBody.setAttribute("padding-left","20px");
 
-            document.getElementById("commentLists").appendChild(divImg);
-            document.getElementById("commentLists").appendChild(divCommentHeading);
+            // document.getElementById("commentLists").appendChild(divImg);
+            // document.getElementById("commentLists").appendChild(divCommentHeading);
+
+            document.getElementById("commentUserIcon").appendChild(divImg);
+            document.getElementById("commentUserName").appendChild(h4);
+            document.getElementById("commentTime").appendChild(h5);
+            document.getElementById("commentData").appendChild(p);
              
              //check if it's the last item in the object
             $("#showHideCommentBtn").text("Loading...");
